@@ -2,8 +2,6 @@
 
 A production-quality full-stack SaaS application to manage, track, and compare machine learning experiments. It functions as a lightweight alternative to MLflow or Weights & Biases.
 
-![Dashboard Preview](https://via.placeholder.com/1200x600?text=Dashboard+Preview)
-
 ## Features
 
 - **Dashboard**: High-level analytics and visualizations (Recharts) summarizing your experiments.
