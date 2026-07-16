@@ -48,7 +48,7 @@ export default function ExperimentDetailPage() {
           <h2 className="text-3xl font-bold tracking-tight">{experiment.experiment_name}</h2>
           <Badge variant={variant as any} className="ml-2">{experiment.status}</Badge>
         </div>
-        <Button render={<Link href={`/experiments/${id}/edit`} />}>
+        <Button render={<Link href={`/experiments/${id}/edit`} />} nativeButton={false}>
           <Edit className="mr-2 h-4 w-4" /> Edit
         </Button>
       </div>

@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
+  DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 
@@ -74,14 +75,16 @@ export const columns: ColumnDef<Experiment>[] = [
             </Button>
           } />
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem render={<Link href={`/experiments/${exp.id}`} className="cursor-pointer" />}>
-              <Eye className="mr-2 h-4 w-4" /> View Details
-            </DropdownMenuItem>
-            <DropdownMenuItem render={<Link href={`/experiments/${exp.id}/edit`} className="cursor-pointer" />}>
-              <Edit className="mr-2 h-4 w-4" /> Edit
-            </DropdownMenuItem>
-            {/* Delete will be handled in the data-table component via a passed function later, or just a simple link/action here */}
+            <DropdownMenuGroup>
+              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+              <DropdownMenuItem render={<Link href={`/experiments/${exp.id}`} className="cursor-pointer" />}>
+                <Eye className="mr-2 h-4 w-4" /> View Details
+              </DropdownMenuItem>
+              <DropdownMenuItem render={<Link href={`/experiments/${exp.id}/edit`} className="cursor-pointer" />}>
+                <Edit className="mr-2 h-4 w-4" /> Edit
+              </DropdownMenuItem>
+              {/* Delete will be handled in the data-table component via a passed function later, or just a simple link/action here */}
+            </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
       );
